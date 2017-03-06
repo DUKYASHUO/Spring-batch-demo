@@ -15,8 +15,8 @@ import jp.co.sysevo.model.OutptData;
 public class OutptItemProcessor implements ItemProcessor<InptData, OutptData>{
 	@Override
 	public OutptData process(InptData item) throws Exception {
-		System.out.println("------------------EntryItemProcessor---------------------");
-		System.out.println(item.toString());
+//		System.out.println("------------------EntryItemProcessor---------------------");
+//		System.out.println(item.toString());
 		
 		OutptData result = new OutptData();
 		result.setId(item.getId());
@@ -28,7 +28,7 @@ public class OutptItemProcessor implements ItemProcessor<InptData, OutptData>{
 		result.setDes("Global");
 		result.setDesJp("Japan");
 		result.setUpdTs(getUpdTs());
-		System.out.println(result.toString());
+//		System.out.println(result.toString());
 		return result;
 	}
 

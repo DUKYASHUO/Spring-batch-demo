@@ -1,11 +1,11 @@
 package jp.co.sysevo.model;
 
+import java.io.Serializable;
 import java.util.Date;
-
 import org.springframework.stereotype.Component;
 
 @Component("outptData")
-public class OutptData {
+public class OutptData implements Serializable {
 	
 	public String id;
 	public String name;

@@ -20,10 +20,12 @@
 					<batch:streams>
 						<batch:stream ref="globalWriter" />
 						<batch:stream ref="japanWriter" />
-						<batch:stream ref="resultWriter" />
 					</batch:streams>
 				</batch:chunk>
 			</batch:tasklet>
+			<batch:listeners>
+				<batch:listener ref="promotionListener"/>
+			</batch:listeners>
 		</batch:step>
 		<batch:step id="UpdateTable">
 			<batch:tasklet>
@@ -44,12 +46,11 @@
 		</property>
 	</bean>
 
-	<bean id="multiItemWriter" class="org.springframework.batch.item.support.CompositeItemWriter">
+	<bean id="multiItemWriter" class="jp.co.sysevo.batch.OutptItemWriter">
 		<property name="delegates">
 			<list>
 				<ref bean="globalWriter" />
 				<ref bean="japanWriter" />
-				<ref bean="resultWriter" />
 			</list>
 		</property>
 	</bean>
@@ -82,19 +83,19 @@
 		</property>
 	</bean>
 
-	<bean id="resultWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
-		<property name="resource" value="file:data/RCV_TEMP.TXT" />
-		<property name="lineAggregator">
-			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
-				<property name="delimiter" value=',' />
-				<property name="fieldExtractor">
-					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
-						<property name="names" value="id, sendFlg, updTs" />
-					</bean>
-				</property>
-			</bean>
-		</property>
-	</bean>
+	<!--<bean id="resultWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">-->
+		<!--<property name="resource" value="file:data/RCV_TEMP.TXT" />-->
+		<!--<property name="lineAggregator">-->
+			<!--<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">-->
+				<!--<property name="delimiter" value=',' />-->
+				<!--<property name="fieldExtractor">-->
+					<!--<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">-->
+						<!--<property name="names" value="id, sendFlg, updTs" />-->
+					<!--</bean>-->
+				<!--</property>-->
+			<!--</bean>-->
+		<!--</property>-->
+	<!--</bean>-->
 
 	<bean id="resultReader" class="org.springframework.batch.item.file.FlatFileItemReader">
 		<property name="resource" value="file:data/RCV_TEMP.TXT" />
@@ -119,17 +120,22 @@
 		</property>
 	</bean>
 
-	
-	<bean id="updateWriter" class="org.mybatis.spring.batch.MyBatisBatchItemWriter" scope="step">
+	<bean id="updateWriter" class="jp.co.sysevo.batch.UpdateItemWriter" scope="step">
+	<!--<bean id="updateWriter" class="org.mybatis.spring.batch.MyBatisBatchItemWriter" scope="step">-->
 	
 	<!--
 	<bean id="updateWriter" class="jp.co.sysevo.batch.UpdateItemWriter" scope="step">
 	-->
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-		<property name="statementId" value="updateTable"/>
+		<!--<property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
+		<!--<property name="statementId" value="updateTable"/>-->
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+
+    <bean id="promotionListener" class="org.springframework.batch.core.listener.ExecutionContextPromotionListener">
+		<property name="keys" value="stepItems"/>
+	</bean>
+
 </beans>
