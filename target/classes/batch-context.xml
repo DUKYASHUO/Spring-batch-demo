@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/batch
+		http://www.springframework.org/schema/batch/spring-batch.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/integration
+		http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/file
+		http://www.springframework.org/schema/integration/file/spring-integration-file-4.3.xsd
+		http://www.springframework.org/schema/integration/ftp
+		http://www.springframework.org/schema/integration/ftp/spring-integration-ftp-4.3.xsd
+	">
+
+	<!-- componentパッケージの設定 -->
+	<context:component-scan base-package="jp.co.misumi" />
+
+	<!-- 設定ファイルの読み込み -->
+	<import resource="classpath:/META-INF/spring/job-context.xml"/>
+
+	<!-- Jobリポジトリの設定 -->
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+		<property name="transactionManager" ref="transactionManager"/>
+	</bean>
+
+	<!-- Luncherの設定 -->
+	<bean id="jobLauncher"
+		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+
+	<!-- transactionManager -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" lazy-init="true">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- JDBCの設定ファイルのロード -->
+	<context:property-placeholder location="classpath:/META-INF/conf.properties" />
+
+	<!-- DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver.class.name}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<!-- Spring integration -->
+	<bean id="ftpSessionFactory"
+		class="org.springframework.integration.ftp.session.DefaultFtpSessionFactory">
+		<property name="host" value="${ftp.host}" />
+		<property name="port" value="${ftp.port}" />
+		<property name="username" value="${ftp.username}" />
+		<property name="password" value="${ftp.password}" />
+		<property name="clientMode" value="0" />
+	</bean>
+
+	<int-ftp:outbound-channel-adapter id="ftpOutbound"
+		channel="outputChannel" session-factory="ftpSessionFactory" charset="UTF-8"
+		remote-file-separator="/" auto-create-directory="true"
+		remote-directory="${ftp.dir}"
+		mode="REPLACE" />
+
+	<int:channel id="outputChannel" />
+
+	<bean id="fileNameGenerator" class="org.springframework.integration.file.DefaultFileNameGenerator" />
+
+	<!-- Mybatis -->
+	<!-- MapperScannerConfigurer-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="jp.co.misumi.mapper"/>
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+</beans>

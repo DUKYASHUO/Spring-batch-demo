@@ -1,0 +1,9 @@
+jp/co/misumi/batch/FVQ_ItemProcessor.class
+jp/co/misumi/mapper/OutptDataMapper.class
+jp/co/misumi/batch/FVQ_StoredProcedure.class
+jp/co/misumi/model/OutptData.class
+jp/co/misumi/model/InptData.class
+jp/co/misumi/batch/FVQ_FtpTasklet.class
+jp/co/misumi/batch/FVQ_MultiItemWriter.class
+jp/co/misumi/mapper/InptDataMapper.class
+jp/co/misumi/exception/BatchSkipException.class

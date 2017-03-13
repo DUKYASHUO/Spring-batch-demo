@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="93" failures="0" name="jp.co.misumi.Spring_Batch.AppTest" time="0.553" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/opt/jdk1.8.0_111/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/duyashuo/share/project/Spring-Batch-new/Spring-batch-demo"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/duyashuo/share/project/Spring-Batch-new/Spring-batch-demo"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/opt/jdk1.8.0_111/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/opt/apache-maven-3.3.9/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.19.0-82-generic"/>
+    <property name="user.home" value="/home/duyashuo"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="duyashuo"/>
+    <property name="java.class.path" value="/opt/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/opt/jdk1.8.0_111/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="/opt/jdk1.8.0_111/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/opt/jdk1.8.0_111/jre/lib/resources.jar:/opt/jdk1.8.0_111/jre/lib/rt.jar:/opt/jdk1.8.0_111/jre/lib/sunrsasign.jar:/opt/jdk1.8.0_111/jre/lib/jsse.jar:/opt/jdk1.8.0_111/jre/lib/jce.jar:/opt/jdk1.8.0_111/jre/lib/charsets.jar:/opt/jdk1.8.0_111/jre/lib/jfr.jar:/opt/jdk1.8.0_111/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/opt/apache-maven-3.3.9"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="jp.co.misumi.Spring_Batch.AppTest" name="testApp" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testTransferProcessor" time="0.053"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBacthDiv1" time="0.001"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBacthDiv2" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBacthDiv3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBacthDiv4" time="0.001"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBacthDiv5" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testbrandNameForProductCdElse" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testChildSeq" time="0.015"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testTmpPackingPrintFlgJp1" time="0.001"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testTmpPackingPrintFlgJp2" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testTmpPackingPrintFlgJp3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testTmpPackingPrintFlgJp4" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithHeaderGrp0" time="0.02"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithHeaderGrp2" time="0.019"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExcludeTaxSUPrice" time="0.013"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustName_2JpNvl" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testNoMJPWithCustRefGrp0" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testDirectInputInfor" time="0.008"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMcPlantDiv" time="0.007"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCrd" time="0.007"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp" time="0.012"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testcustsubSubsidiaryCd" time="0.01"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdExistInfor" time="0.009"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCrtDt" time="0.008"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testPlant" time="0.036"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp1" time="0.008"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp2" time="0.023"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp3" time="0.012"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustCategoryCd01" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustCategoryCd02" time="0.007"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testPurcPrice" time="0.011"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustCategoryCd" time="0.007"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testSubsidiaryCdArrDt" time="0.008"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlgFalseNotExis" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlgTrueExis" time="0.007"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdExist" time="0.005"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlg1" time="0.05"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdNotExist" time="0.013"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustName_2JpNotSpace" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlgFalse" time="0.015"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustsubSubsidiaryCd" time="0.01"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrpNot2" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithEngHeaderGrp0" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithEngHeaderGrp2" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testNoShipToCd" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustNotEsSubsidiary" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testOrderMsgCd" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlg1CustName" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithcustRefGrp0" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCometSeq" time="0.005"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdTrueNotExistInfor" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRankPatrolDiv" time="0.005"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testSchdArrDt" time="0.005"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdNotExistInfor" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testLabelEarlyObjectDivJp1" time="0.001"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testLabelEarlyObjectDivJp2" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testLabelEarlyObjectDivJp3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testLabelEarlyObjectDivJp4" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr1" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr2" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr4" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr5" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr6" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr7" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testRefStr8" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp2ntvDeliNotEuqal" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testbrandNameForProductCd" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testCustName_2JpSpace" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipToCdBLANKInfor" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp2ntvDeli" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testFixedValue" time="0.006"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testFinalCustNameEn1" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testFinalCustNameEn2" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testFinalCustNameEn3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testFinalCustNameEn4" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testGrp2Deli" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBrandProductCdJp1" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBrandProductCdJp2" time="0.001"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testBrandProductCdJp3" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testSchdShipDt" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testInptCustEsSubsidiary" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testShipTo" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testOrderMsgCd9001" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testOrderMsgCd9002" time="0.003"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testSoDate" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testbrandNameForProductCdMISUMI" time="0"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithCustRefGrp0" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testMJPWithCustRefGrp2" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testNoSubsidiaryCdArrDt" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testExportFlg0CustName" time="0.004"/>
+  <testcase classname="jp.co.misumi.Spring_Batch.ItemProcessorTest" name="testNoChildSeq" time="0.003"/>
+</testsuite>
